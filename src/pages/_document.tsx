@@ -18,27 +18,6 @@ class MyDocument extends Document {
             title="RSS 2.0"
             href="/feed"
           ></link>
-            {/* google analytics */}
-            {CONFIG.googleAnalytics.enable === true && (
-            <>
-              <script
-                async
-                src={`https://www.googletagmanager.com/gtag/js?id=${CONFIG.googleAnalytics.config.measurementId}`}
-              ></script>
-              <script
-                dangerouslySetInnerHTML={{
-                  __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments)}
-                  gtag('js', new Date());
-                  gtag('config', '${CONFIG.googleAnalytics.config.measurementId}', {
-                    page_path: window.location.pathname,
-                  });
-                `,
-                }}
-              />
-            </>
-          )}
           {/* google ad sense */}
           {CONFIG.googleAdSense.enable === true && (
             <>
