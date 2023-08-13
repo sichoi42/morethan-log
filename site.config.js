@@ -1,32 +1,32 @@
 const CONFIG = {
   // profile setting (required)
   profile: {
-    name: "morethanmin",
+    name: "sichoi",
     image: "/avatar.svg", // If you want to create your own notion avatar, check out https://notion-avatar.vercel.app
-    role: "frontend developer",
-    bio: "I develop everything using node.",
-    email: "morethanmin.dev@gmail.com",
-    linkedin: "morethanmin",
-    github: "morethanmin",
+    role: "backend developer",
+    bio: "I love develop with NestJS And Spring Boot",
+    email: "42.4.sichoi@gmail.com",
+    linkedin: "",
+    github: "sichoi42",
     instagram: "",
   },
   projects: [
     {
-      name: `morethan-log`,
-      href: "https://github.com/morethanmin/morethan-log",
+      name: "Cabi",
+      href: "https://github.com/innovationacademy-kr/42cabi",
     },
   ],
   // blog setting (required)
   blog: {
-    title: "morethan-log",
-    description: "welcome to morethan-log!",
+    title: "bit가 모여 page가 된다",
+    description: "내가 궁금했던 모든 것을 기록하는 공간",
   },
 
   // CONFIG configration (required)
-  link: "https://morethan-log.vercel.app",
-  since: 2022, // If leave this empty, current year will be used.
+  link: "https://sichoi.vercel.app",
+  since: 2023, // If leave this empty, current year will be used.
   lang: "en-US", // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES', 'ko-KR']
-  ogImageGenerateURL: "https://og-image-korean.vercel.app", // The link to generate OG image, don't end with a slash
+  ogImageGenerateURL: "/avatar.svg", // The link to generate OG image, don't end with a slash
 
   // notion configuration (required)
   notionConfig: {
@@ -35,21 +35,27 @@ const CONFIG = {
 
   // plugin configuration (optional)
   googleAnalytics: {
-    enable: false,
+    enable: true,
     config: {
-      measurementId: process.env.NEXT_PUBLIC_GOOGLE_MEASUREMENT_ID || "",
+      measurementId: process.env.GOOGLE_MEASUREMENT_ID || "",
+    },
+  },
+  googleAdSense: {
+    enable: true,
+    config: {
+      dataAdClient: process.env.GOOGLE_AD_CLIENT || "",
     },
   },
   googleSearchConsole: {
-    enable: false,
+    enable: true,
     config: {
-      siteVerification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "",
+      siteVerification: process.env.GOOGLE_SITE_VERIFICATION || "",
     },
   },
   utterances: {
     enable: true,
     config: {
-      repo: process.env.NEXT_PUBLIC_UTTERANCES_REPO,
+      repo: "sichoi42/morethan-log",
       "issue-term": "og:title",
       label: "💬 Utterances",
     },
