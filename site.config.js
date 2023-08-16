@@ -37,19 +37,19 @@ const CONFIG = {
   googleAnalytics: {
     enable: true,
     config: {
-      measurementId: process.env.GOOGLE_MEASUREMENT_ID || "",
+      measurementId: process.env.NEXT_PUBLIC_GOOGLE_MEASUREMENT_ID || "",
     },
   },
   googleAdSense: {
     enable: true,
     config: {
-      dataAdClient: process.env.GOOGLE_AD_CLIENT || "",
+      dataAdClient: process.env.NEXT_PUBLIC_GOOGLE_AD_CLIENT || "",
     },
   },
   googleSearchConsole: {
     enable: true,
     config: {
-      siteVerification: process.env.GOOGLE_SITE_VERIFICATION || "",
+      siteVerification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "",
     },
   },
   utterances: {
