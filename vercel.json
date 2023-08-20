@@ -1,0 +1,10 @@
+{
+  "functions": [
+    {
+      "key": "api/revalidate",
+      "value": {
+        "maxDuration": 60
+      }
+    }
+  ]
+}
