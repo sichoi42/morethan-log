@@ -5,6 +5,7 @@ import { idToUuid } from "notion-utils"
 import getAllPageIds from "src/libs/utils/notion/getAllPageIds"
 import getPageProperties from "src/libs/utils/notion/getPageProperties"
 import { TPosts } from "src/types"
+let cachedPosts: TPosts | null = null
 
 /**
  * @param {{ includePages: boolean }} - false: posts only / true: include pages
@@ -12,6 +13,9 @@ import { TPosts } from "src/types"
 
 // TODO: react query를 사용해서 처음 불러온 뒤로는 해당데이터만 사용하도록 수정
 export const getPosts = async () => {
+  if (cachedPosts !== null) {
+    return cachedPosts
+  }
   let id = CONFIG.notionConfig.pageId as string
   console.log(`[Notion] Fetching posts from ${id}`)
   const api = new NotionAPI()
@@ -55,6 +59,7 @@ export const getPosts = async () => {
     })
 
     const posts = data as TPosts
+    cachedPosts = posts
     return posts
   }
 }
