@@ -2,9 +2,9 @@ const CONFIG = {
   // profile setting (required)
   profile: {
     name: "최시원",
-    image: "/avatar.jpg", // If you want to create your own notion avatar, check out https://notion-avatar.vercel.app
+    image: "/avatar.png", // If you want to create your own notion avatar, check out https://notion-avatar.vercel.app
     role: "Software Engineer",
-    bio: "DevOps와 서버, 자동화에 관심이 많은 개발자입니다.",
+    bio: "물고기 잡는 방법을 아는 개발자",
     email: "42.4.sichoi@gmail.com",
     linkedin: "",
     github: "sichoi42",
@@ -26,7 +26,7 @@ const CONFIG = {
   link: "https://blog.sichoi.dev",
   since: 2023, // If leave this empty, current year will be used.
   lang: "en-US", // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES', 'ko-KR']
-  ogImageGenerateURL: "/avatar.jpg", // The link to generate OG image, don't end with a slash
+  ogImageGenerateURL: "/avatar.png", // The link to generate OG image, don't end with a slash
 
   about: {
     url: process.env.NEXT_PUBLIC_ABOUT_URL || "/about",
